@@ -15,7 +15,7 @@
  */
 syntax = "proto2";
 
-option java_package = "com.android.launcher3.logger";
+option java_package = "com.resurrection.launcher.logger";
 option java_outer_classname = "LauncherAtom";
 
 import "launcher_atom_extension.proto";

@@ -3,8 +3,8 @@ plugins {
 }
 
 android {
-    namespace 'com.android.launcher3.dagger.qualifiers'
-    compileSdk 36
+    namespace 'com.resurrection.launcher.dagger.qualifiers'
+    compileSdk 37
 
     defaultConfig {
         minSdk 31

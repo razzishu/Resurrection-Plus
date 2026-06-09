@@ -12,7 +12,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.launcher3.widget.picker.WidgetsTwoPaneSheet
+<com.resurrection.launcher.widget.picker.WidgetsTwoPaneSheet
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +20,7 @@
     android:orientation="vertical"
     android:theme="?attr/widgetsTheme">
 
-    <com.android.launcher3.views.SpringRelativeLayout
+    <com.resurrection.launcher.views.SpringRelativeLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -80,7 +80,7 @@
                     android:layout_marginEnd="@dimen/fastscroll_popup_margin" />
 
                 <!-- Fast scroller popup -->
-                <com.android.launcher3.views.RecyclerViewFastScroller
+                <com.resurrection.launcher.views.RecyclerViewFastScroller
                     android:id="@+id/fast_scroller"
                     android:layout_width="@dimen/fastscroll_width"
                     android:layout_height="match_parent"
@@ -144,5 +144,5 @@
                 </FrameLayout>
             </FrameLayout>
         </LinearLayout>
-    </com.android.launcher3.views.SpringRelativeLayout>
-</com.android.launcher3.widget.picker.WidgetsTwoPaneSheet>
+    </com.resurrection.launcher.views.SpringRelativeLayout>
+</com.resurrection.launcher.widget.picker.WidgetsTwoPaneSheet>

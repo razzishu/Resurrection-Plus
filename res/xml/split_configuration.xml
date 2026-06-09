@@ -11,8 +11,8 @@
         window:finishSecondaryWithPrimary="always"
         window:clearTop="false">
         <SplitPairFilter
-            window:primaryActivityName="com.android.launcher3.settings.SettingsActivity"
-            window:secondaryActivityName="com.android.launcher3.settings.SettingsActivity"/>
+            window:primaryActivityName="com.resurrection.launcher.settings.SettingsActivity"
+            window:secondaryActivityName="com.resurrection.launcher.settings.SettingsActivity"/>
 
     </SplitPairRule>
 </resources>

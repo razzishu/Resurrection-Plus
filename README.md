@@ -1,54 +1,46 @@
-# Launcher3
+# Resurrection+
 
-Android Studio/Gradle project for AOSP Launcher3.
+Android Studio/Gradle project for **Resurrection+**, a highly optimized custom launcher.
 
-[简体中文](README.zh-CN.md) | [日本語](README.ja.md)
+## About Resurrection+
 
-## Source
+This is the **initial bringup** of Resurrection+, a custom launcher designed for speed, stability, and modern features. This project provides a fully buildable standalone base within Android Studio, serving as the foundation for our future development.
 
-- Launcher3: https://android.googlesource.com/platform/packages/apps/Launcher3
-- Branch: `android16-qpr2-release`
+### Tooling & Versions
+This project uses the latest stable development stack (as of June 2026):
+- **Gradle:** `9.5.1`
+- **Android Gradle Plugin (AGP):** `9.2.1`
+- **Kotlin:** `2.4.0`
+- **KSP:** `2.3.9`
+- **Compile/Target SDK:** `37` (Android 17)
+- **JDK:** `17+`
+
+## Credits
+
+- **Base Repository Credits:** This project was originally made possible by the incredible work in the [sestet/Launcher3](https://github.com/sestet/Launcher3) repository, which provided the foundation for a standalone Gradle-based build.
 
 ## Build
 
-Requirements:
+To build the project, use the following commands:
 
-- JDK 17+
-- Android SDK platform 36
-
+### Debug Build
 ```bash
 ./gradlew :assembleDebug
 ```
+Output: `build/outputs/apk/resurrection/debug/Resurrection+-debug.apk`
 
-Debug APK:
-
-```text
-build/outputs/apk/debug/Launcher3-debug.apk
+### Release Build
+```bash
+./gradlew :assembleRelease
 ```
+Output: `build/outputs/apk/resurrection/release/Resurrection+-release.apk`
 
 ## Install
 
 ```bash
-adb install -r build/outputs/apk/debug/Launcher3-debug.apk
-adb shell am start -W -n com.android.launcher3/.Launcher
+# For Debug version
+adb install -r build/outputs/apk/resurrection/debug/Resurrection+-debug.apk
+
+# Start the Launcher
+adb shell am start -W -n com.resurrection.launcher/.Launcher
 ```
-
-## Modules
-
-| Module | Path | Source | Role |
-| --- | --- | --- | --- |
-| `:` | `.` | AOSP `platform/packages/apps/Launcher3` | Launcher3 app module. The Gradle manifest is `launcher3/AndroidManifest.xml`; source and resources stay in the AOSP layout. |
-| `:concurrent` | `modules/concurrent` | AOSP Launcher3 | Launcher executor qualifiers and concurrency bindings. |
-| `:dagger` | `dagger` | AOSP Launcher3 | Dagger qualifier annotations used by Launcher3. |
-| `:launcher-testing-shared` | `shared` | AOSP Launcher3 | Shared Launcher test/support APIs required by the build. |
-| `:iconloaderlib` | `platform_frameworks_libs_systemui/iconloaderlib` | AOSP `platform/frameworks/libs/systemui/iconloaderlib` | Icon loading and icon cache library used by Launcher3. |
-| `:animationlib` | `platform_frameworks_libs_systemui/animationlib` | Local compatibility layer | Minimal animation APIs used by Launcher3. |
-| `:msdllib` | `platform_frameworks_libs_systemui/msdllib` | Local compatibility layer | Minimal MSDL APIs used by Launcher3. |
-| `:plugincore` | `systemUI/plugin_core` | Local compatibility layer for AOSP SystemUI `plugin_core` | Minimal SystemUI plugin core interfaces. |
-| `:systemui-statsd` | `systemUI/statsd` | Local compatibility layer | Minimal `SysUiStatsLog` constants used by Launcher3. |
-| `:wmshell` | `wmshell` | Local compatibility layer for AOSP WM Shell | Minimal WM Shell APIs used by Launcher3. |
-| `:flags` | `flags` | Local compatibility layer | Platform flag API stubs used outside the full Android platform build. |
-
-## License
-
-Apache License 2.0. See `LICENSE`.

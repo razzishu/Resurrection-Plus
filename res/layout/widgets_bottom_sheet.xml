@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<com.android.launcher3.widget.WidgetsBottomSheet
+<com.resurrection.launcher.widget.WidgetsBottomSheet
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -24,4 +24,4 @@
 
     <include layout="@layout/widgets_bottom_sheet_content" />
 
-</com.android.launcher3.widget.WidgetsBottomSheet>
+</com.resurrection.launcher.widget.WidgetsBottomSheet>

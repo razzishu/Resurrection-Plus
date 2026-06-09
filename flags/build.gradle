@@ -3,8 +3,8 @@ plugins {
 }
 
 android {
-    namespace 'com.android.launcher3.flags'
-    compileSdk 36
+    namespace 'com.resurrection.launcher.flags'
+    compileSdk 37
 
     defaultConfig {
         minSdk 31

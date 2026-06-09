@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.compose.core.widgetpicker
+package com.resurrection.launcher.compose.core.widgetpicker
 
-import com.android.launcher3.widgetpicker.WidgetPickerActivity
-import com.android.launcher3.widgetpicker.WidgetPickerConfig
+import com.resurrection.launcher.widgetpicker.WidgetPickerActivity
+import com.resurrection.launcher.widgetpicker.WidgetPickerConfig
 import javax.annotation.Nonnull
 import javax.inject.Inject
 

@@ -15,7 +15,7 @@
 -->
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto" >
-    <com.android.launcher3.widget.picker.WidgetsRecyclerView
+    <com.resurrection.launcher.widget.picker.WidgetsRecyclerView
         android:id="@+id/primary_widgets_list_view"
         android:layout_below="@id/collapse_handle"
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:clipToPadding="false" />
 
     <!-- SearchAndRecommendationsView without the tab layout as well -->
-    <com.android.launcher3.views.StickyHeaderLayout
+    <com.resurrection.launcher.views.StickyHeaderLayout
         android:id="@+id/search_and_recommendations_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,6 +70,6 @@
             android:visibility="gone">
             <include layout="@layout/widget_recommendations" />
         </LinearLayout>
-    </com.android.launcher3.views.StickyHeaderLayout>
+    </com.resurrection.launcher.views.StickyHeaderLayout>
 
 </merge>

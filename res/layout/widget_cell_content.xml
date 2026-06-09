@@ -17,7 +17,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <com.android.launcher3.widget.WidgetCellPreview
+    <com.resurrection.launcher.widget.WidgetCellPreview
         android:id="@+id/widget_preview_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -29,13 +29,13 @@
         <!-- The image of the widget. This view does not support padding. Any placement adjustment
              should be done using margins. Width & height are set at runtime after scaling the
              preview image. -->
-        <com.android.launcher3.widget.WidgetImageView
+        <com.resurrection.launcher.widget.WidgetImageView
             android:id="@+id/widget_preview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:importantForAccessibility="no"
             android:layout_gravity="fill"/>
-    </com.android.launcher3.widget.WidgetCellPreview>
+    </com.resurrection.launcher.widget.WidgetCellPreview>
 
     <FrameLayout
         android:layout_width="match_parent"

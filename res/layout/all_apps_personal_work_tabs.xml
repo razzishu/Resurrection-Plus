@@ -14,7 +14,7 @@
   ~ limitations under the License.
 -->
 
-<com.android.launcher3.workprofile.PersonalWorkSlidingTabStrip
+<com.resurrection.launcher.workprofile.PersonalWorkSlidingTabStrip
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
     android:id="@+id/tabs"
@@ -51,4 +51,4 @@
         android:textColor="@color/all_apps_tab_text"
         android:textSize="14sp"
         style="@style/AllAppsPersonalWorkTabStyle" />
-</com.android.launcher3.workprofile.PersonalWorkSlidingTabStrip>
+</com.resurrection.launcher.workprofile.PersonalWorkSlidingTabStrip>

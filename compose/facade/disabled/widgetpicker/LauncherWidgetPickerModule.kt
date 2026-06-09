@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.compose.widgetpicker
+package com.resurrection.launcher.compose.widgetpicker
 
-import com.android.launcher3.compose.core.widgetpicker.NoOpWidgetPickerModule
+import com.resurrection.launcher.compose.core.widgetpicker.NoOpWidgetPickerModule
 import dagger.Module
 
 /**

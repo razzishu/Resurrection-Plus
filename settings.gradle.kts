@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Launcher3"
+rootProject.name = "Resurrection+"
 
 fun includeModule(name: String, path: String = name) {
     include(":$name")

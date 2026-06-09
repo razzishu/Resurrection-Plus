@@ -13,7 +13,7 @@
      limitations under the License.
 -->
 
-<com.android.launcher3.allapps.WorkEduCard xmlns:android="http://schemas.android.com/apk/res/android"
+<com.resurrection.launcher.allapps.WorkEduCard xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="@dimen/work_edu_card_margin"
@@ -61,4 +61,4 @@
                 android:src="@drawable/ic_close_work_edu" />
         </FrameLayout>
     </LinearLayout>
-</com.android.launcher3.allapps.WorkEduCard>
+</com.resurrection.launcher.allapps.WorkEduCard>

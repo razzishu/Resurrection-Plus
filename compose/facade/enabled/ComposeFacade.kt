@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.compose
+package com.resurrection.launcher.compose
 
 import android.content.Context
 import android.view.View
 import androidx.compose.ui.platform.ComposeView
-import com.android.launcher3.compose.core.BaseComposeFacade
+import com.resurrection.launcher.compose.core.BaseComposeFacade
 
 object ComposeFacade : BaseComposeFacade {
     override fun isComposeAvailable(): Boolean = true

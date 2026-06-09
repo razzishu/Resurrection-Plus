@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.launcher3.widget.picker.WidgetsListTableView
+<com.resurrection.launcher.widget.picker.WidgetsListTableView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widgets_table"
     android:paddingHorizontal="@dimen/widget_list_horizontal_margin"

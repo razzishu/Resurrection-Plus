@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<view class="com.android.launcher3.preview.LauncherPreviewRenderer$LauncherPreviewLayout"
+<view class="com.resurrection.launcher.preview.LauncherPreviewRenderer$LauncherPreviewLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.android.launcher3.CellLayout
+        <com.resurrection.launcher.CellLayout
             android:id="@+id/workspace"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -36,7 +36,7 @@
             launcher:layout_constraintBottom_toBottomOf="parent"
             launcher:pageIndicator="@+id/page_indicator" />
 
-        <com.android.launcher3.CellLayout
+        <com.resurrection.launcher.CellLayout
             android:id="@+id/workspace_right"
             android:layout_width="0dp"
             android:layout_height="0dp"

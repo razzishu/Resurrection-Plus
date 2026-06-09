@@ -16,9 +16,9 @@
 
 package android.os
 
-import com.android.launcher3.util.Executors.MAIN_EXECUTOR
-import com.android.launcher3.util.WeakCleanupSet
-import com.android.launcher3.util.WeakCleanupSet.OnOwnerDestroyedCallback
+import com.resurrection.launcher.util.Executors.MAIN_EXECUTOR
+import com.resurrection.launcher.util.WeakCleanupSet
+import com.resurrection.launcher.util.WeakCleanupSet.OnOwnerDestroyedCallback
 
 /** Utility methods related to Binder */
 object BinderUtils {

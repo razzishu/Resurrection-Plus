@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.compose.core
+package com.resurrection.launcher.compose.core
 
 import android.content.Context
 import android.view.View

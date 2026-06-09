@@ -14,11 +14,11 @@
   ~ limitations under the License.
   -->
 
-<com.android.launcher3.allapps.LetterListTextView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.resurrection.launcher.allapps.LetterListTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="@dimen/fastscroll_list_letter_size"
     android:layout_height="@dimen/fastscroll_list_letter_size"
     android:textSize="@dimen/fastscroll_list_letter_text_size"
     android:importantForAccessibility="no"
     android:gravity="center"
     android:clickable="false">
-</com.android.launcher3.allapps.LetterListTextView>
+</com.resurrection.launcher.allapps.LetterListTextView>

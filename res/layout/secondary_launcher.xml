@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.launcher3.secondarydisplay.SecondaryDragLayer
+<com.resurrection.launcher.secondarydisplay.SecondaryDragLayer
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -42,7 +42,7 @@
         android:contentDescription="@string/all_apps_button_label"
         android:onClick="onAppsButtonClicked" />
 
-    <com.android.launcher3.allapps.SecondaryLauncherAllAppsContainerView
+    <com.resurrection.launcher.allapps.SecondaryLauncherAllAppsContainerView
         android:id="@+id/apps_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,4 +53,4 @@
         android:layout_gravity="bottom|end"
         android:background="@drawable/round_rect_primary"
         android:visibility="invisible" />
-</com.android.launcher3.secondarydisplay.SecondaryDragLayer>
+</com.resurrection.launcher.secondarydisplay.SecondaryDragLayer>

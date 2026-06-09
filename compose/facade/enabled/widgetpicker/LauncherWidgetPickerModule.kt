@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.compose.widgetpicker
+package com.resurrection.launcher.compose.widgetpicker
 
-import com.android.launcher3.compose.core.widgetpicker.WidgetPickerComposeWrapper
-import com.android.launcher3.widgetpicker.WidgetPickerComponent
-import com.android.launcher3.widgetpicker.WidgetPickerComposeWrapperImpl
-import com.android.launcher3.widgetpicker.data.repository.WidgetAppIconsRepository
-import com.android.launcher3.widgetpicker.data.repository.WidgetUsersRepository
-import com.android.launcher3.widgetpicker.data.repository.WidgetsRepository
-import com.android.launcher3.widgetpicker.datasource.ConfigResourceFeaturedWidgetsDataSource
-import com.android.launcher3.widgetpicker.datasource.FeaturedWidgetsDataSource
-import com.android.launcher3.widgetpicker.datasource.InMemoryWidgetSearchAlgorithm
-import com.android.launcher3.widgetpicker.datasource.WidgetsSearchAlgorithm
-import com.android.launcher3.widgetpicker.repository.WidgetsRepositoryImpl
-import com.android.launcher3.widgetpicker.repository.WidgetAppIconsRepositoryImpl
-import com.android.launcher3.widgetpicker.repository.WidgetUsersRepositoryImpl
+import com.resurrection.launcher.compose.core.widgetpicker.WidgetPickerComposeWrapper
+import com.resurrection.launcher.widgetpicker.WidgetPickerComponent
+import com.resurrection.launcher.widgetpicker.WidgetPickerComposeWrapperImpl
+import com.resurrection.launcher.widgetpicker.data.repository.WidgetAppIconsRepository
+import com.resurrection.launcher.widgetpicker.data.repository.WidgetUsersRepository
+import com.resurrection.launcher.widgetpicker.data.repository.WidgetsRepository
+import com.resurrection.launcher.widgetpicker.datasource.ConfigResourceFeaturedWidgetsDataSource
+import com.resurrection.launcher.widgetpicker.datasource.FeaturedWidgetsDataSource
+import com.resurrection.launcher.widgetpicker.datasource.InMemoryWidgetSearchAlgorithm
+import com.resurrection.launcher.widgetpicker.datasource.WidgetsSearchAlgorithm
+import com.resurrection.launcher.widgetpicker.repository.WidgetsRepositoryImpl
+import com.resurrection.launcher.widgetpicker.repository.WidgetAppIconsRepositoryImpl
+import com.resurrection.launcher.widgetpicker.repository.WidgetUsersRepositoryImpl
 import dagger.Binds
 import dagger.Module
 

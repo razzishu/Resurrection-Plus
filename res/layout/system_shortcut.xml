@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<com.android.launcher3.shortcuts.DeepShortcutView
+<com.resurrection.launcher.shortcuts.DeepShortcutView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="@dimen/bg_popup_item_width"
     android:layout_height="wrap_content"
@@ -26,4 +26,4 @@
 
     <include layout="@layout/system_shortcut_content" />
 
-</com.android.launcher3.shortcuts.DeepShortcutView>
+</com.resurrection.launcher.shortcuts.DeepShortcutView>

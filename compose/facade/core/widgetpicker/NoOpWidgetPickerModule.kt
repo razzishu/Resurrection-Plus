@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.compose.core.widgetpicker
+package com.resurrection.launcher.compose.core.widgetpicker
 
 import dagger.Binds
 import dagger.Module

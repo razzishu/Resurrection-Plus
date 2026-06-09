@@ -17,7 +17,7 @@
     <include domain="database" path="launcher_13_by_6.db" />
     <include domain="database" path="launcher_16_by_8.db" />
     <include domain="database" path="launcher_22_by_11.db" />
-    <include domain="sharedpref" path="com.android.launcher3.prefs.xml" />
+    <include domain="sharedpref" path="com.resurrection.launcher.prefs.xml" />
     <include domain="file" path="downgrade_schema.json" />
 
 </full-backup-content>

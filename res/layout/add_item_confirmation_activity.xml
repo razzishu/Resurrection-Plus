@@ -16,7 +16,7 @@
 ** limitations under the License.
 */
 -->
-<com.android.launcher3.dragndrop.SimpleDragLayer
+<com.resurrection.launcher.dragndrop.SimpleDragLayer
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/add_item_drag_layer"
     android:layout_width="match_parent"
@@ -25,7 +25,7 @@
     android:clipToPadding="false"
     android:importantForAccessibility="no">
 
-    <com.android.launcher3.widget.AddItemWidgetsBottomSheet
+    <com.resurrection.launcher.widget.AddItemWidgetsBottomSheet
         android:id="@+id/add_item_bottom_sheet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,8 +120,8 @@
                     android:onClick="onPlaceAutomaticallyClick"/>
             </LinearLayout>
         </LinearLayout>
-    </com.android.launcher3.widget.AddItemWidgetsBottomSheet>
+    </com.resurrection.launcher.widget.AddItemWidgetsBottomSheet>
 
-</com.android.launcher3.dragndrop.SimpleDragLayer>
+</com.resurrection.launcher.dragndrop.SimpleDragLayer>
 
 

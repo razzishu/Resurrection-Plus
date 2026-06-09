@@ -39,7 +39,7 @@
         android:ellipsize="end"
         android:visibility="gone" />
     <!-- Shown when there are more than one pages -->
-    <com.android.launcher3.pageindicators.PageIndicatorDots
+    <com.resurrection.launcher.pageindicators.PageIndicatorDots
         android:id="@+id/widget_recommendations_page_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
      the same on the last page, takes them to the next section e.g. apps list in single pane
      picker.
     -->
-    <com.android.launcher3.widget.picker.WidgetRecommendationsView
+    <com.resurrection.launcher.widget.picker.WidgetRecommendationsView
         android:id="@+id/widget_recommendations_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"

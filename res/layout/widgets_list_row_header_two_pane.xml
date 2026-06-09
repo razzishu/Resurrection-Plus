@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.launcher3.widget.picker.WidgetsListHeader xmlns:android="http://schemas.android.com/apk/res/android"
+<com.resurrection.launcher.widget.picker.WidgetsListHeader xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
     android:id="@+id/widgets_list_header"
@@ -65,4 +65,4 @@
             tools:text="m widgets, n shortcuts" />
 
     </LinearLayout>
-</com.android.launcher3.widget.picker.WidgetsListHeader>
+</com.resurrection.launcher.widget.picker.WidgetsListHeader>

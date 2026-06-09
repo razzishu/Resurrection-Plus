@@ -22,7 +22,7 @@ import com.android.systemui.plugins.annotations.ProvidesInterface;
  */
 @ProvidesInterface(action = ResourceProvider.ACTION, version = ResourceProvider.VERSION)
 public interface ResourceProvider extends Plugin {
-    String ACTION = "com.android.launcher3.action.PLUGIN_DYNAMIC_RESOURCE";
+    String ACTION = "com.resurrection.launcher.action.PLUGIN_DYNAMIC_RESOURCE";
     int VERSION = 1;
 
     /**

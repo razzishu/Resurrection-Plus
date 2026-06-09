@@ -81,7 +81,7 @@
                 launcher:layout_sticky="true">
             </FrameLayout>
 
-            <com.android.launcher3.workprofile.PersonalWorkSlidingTabStrip
+            <com.resurrection.launcher.workprofile.PersonalWorkSlidingTabStrip
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
@@ -116,12 +116,12 @@
                     android:textSize="14sp"
                     style="?android:attr/borderlessButtonStyle" />
 
-            </com.android.launcher3.workprofile.PersonalWorkSlidingTabStrip>
+            </com.resurrection.launcher.workprofile.PersonalWorkSlidingTabStrip>
         </LinearLayout>
         <!-- Note: the paddingHorizontal has to be on WidgetPagedView level so that talkback
  correctly orders the lists to be after the search and suggestions header. See b/209579563.
   -->
-        <com.android.launcher3.widget.picker.WidgetPagedView
+        <com.resurrection.launcher.widget.picker.WidgetPagedView
             android:id="@+id/widgets_view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -130,21 +130,21 @@
             android:descendantFocusability="afterDescendants"
             launcher:pageIndicator="@+id/tabs" >
 
-            <com.android.launcher3.widget.picker.WidgetsRecyclerView
+            <com.resurrection.launcher.widget.picker.WidgetsRecyclerView
                 android:id="@+id/primary_widgets_list_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false" />
 
-            <com.android.launcher3.widget.picker.WidgetsRecyclerView
+            <com.resurrection.launcher.widget.picker.WidgetsRecyclerView
                 android:id="@+id/work_widgets_list_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false" />
 
-        </com.android.launcher3.widget.picker.WidgetPagedView>
+        </com.resurrection.launcher.widget.picker.WidgetPagedView>
 
-        <com.android.launcher3.widget.picker.WidgetsRecyclerView
+        <com.resurrection.launcher.widget.picker.WidgetsRecyclerView
             android:id="@+id/search_widgets_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

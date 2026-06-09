@@ -7,7 +7,7 @@
         errorLine1='    &lt;corners android:radius="@android:dimen/system_app_widget_background_radius" /&gt;'
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="packages/apps/Launcher3/res/drawable/widget_resize_frame.xml"
+            file="packages/apps/resurrection/res/drawable/widget_resize_frame.xml"
             line="20"
             column="14"/>
     </issue>
@@ -18,7 +18,7 @@
         errorLine1="            resetColorResources();"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
-            file="packages/apps/Launcher3/src/com/android/launcher3/widget/LauncherAppWidgetHostView.java"
+            file="packages/apps/resurrection/src/com.resurrection.launcher/widget/LauncherAppWidgetHostView.java"
             line="117"
             column="13"/>
     </issue>
@@ -29,7 +29,7 @@
         errorLine1="            view.setColorResources(mWallpaperColorResources);"
         errorLine2="                 ~~~~~~~~~~~~~~~~~">
         <location
-            file="packages/apps/Launcher3/src/com/android/launcher3/graphics/LauncherPreviewRenderer.java"
+            file="packages/apps/resurrection/src/com.resurrection.launcher/graphics/LauncherPreviewRenderer.java"
             line="433"
             column="18"/>
     </issue>

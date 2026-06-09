@@ -1,25 +1,26 @@
 plugins {
-    id 'com.android.application' version '9.0.1'
-    id 'com.android.library' version '9.0.1' apply false
-    id 'com.google.devtools.ksp' version '2.3.4'
+    id 'com.android.application' version '9.2.1'
+    id 'com.android.library' version '9.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '2.4.0' apply false
+    id 'com.google.devtools.ksp' version '2.3.9'
     id 'com.google.protobuf' version '0.10.0'
 }
 
 android {
-    namespace 'com.android.launcher3'
-    compileSdk 36
+    namespace 'com.resurrection.launcher'
+    compileSdk 37
 
     defaultConfig {
-        applicationId 'com.android.launcher3'
+        applicationId 'com.resurrection.launcher'
         minSdk 31
-        targetSdk 36
+        targetSdk 37
         versionCode 1
         versionName '16-qpr2-studio'
     }
 
     flavorDimensions 'app'
     productFlavors {
-        launcher3 {
+        resurrection {
             dimension 'app'
         }
     }
@@ -30,7 +31,7 @@ android {
 
     sourceSets {
         main {
-            manifest.srcFile 'launcher3/AndroidManifest.xml'
+            manifest.srcFile 'launcher/AndroidManifest.xml'
             def launcherSources = [
                     'src',
                     'src_no_quickstep',
@@ -38,15 +39,15 @@ android {
                     'compose/facade/core',
                     'compose/facade/disabled',
                     'src_plugins',
-                    'launcher3/src',
+                    'launcher/src',
             ]
             java.srcDirs = launcherSources
             kotlin.srcDirs = launcherSources
             res.srcDirs = ['res']
             proto.srcDirs = ['protos', 'protos_overrides']
         }
-        launcher3 {
-            res.srcDirs = ['launcher3/res']
+        resurrection {
+            res.srcDirs = ['launcher/res']
         }
     }
 
@@ -72,6 +73,18 @@ android {
     }
 }
 
+base {
+    archivesName = "Resurrection+"
+}
+
+androidComponents {
+    onVariants(selector().all(), { variant ->
+        variant.outputs.each { output ->
+            output.outputFileName.set("Resurrection+-" + variant.name.substring(variant.flavorName.length()).toLowerCase() + ".apk")
+        }
+    })
+}
+
 kotlin {
     compilerOptions {
         freeCompilerArgs.add('-Xjvm-default=all')
@@ -80,7 +93,7 @@ kotlin {
 
 protobuf {
     protoc {
-        artifact = 'com.google.protobuf:protoc:4.32.1'
+        artifact = 'com.google.protobuf:protoc:4.35.0'
     }
     generateProtoTasks {
         all().configureEach { task ->
@@ -106,11 +119,11 @@ dependencies {
     implementation project(':wmshell')
 
     implementation 'androidx.activity:activity-ktx:1.13.0'
-    implementation 'androidx.annotation:annotation:1.9.0'
+    implementation 'androidx.annotation:annotation:1.10.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-    implementation 'androidx.core:core-ktx:1.18.0'
-    implementation 'androidx.customview:customview:1.1.0'
+    implementation 'androidx.core:core-ktx:1.19.0'
+    implementation 'androidx.customview:customview:1.2.0'
     implementation 'androidx.dynamicanimation:dynamicanimation:1.1.0'
     implementation 'androidx.fragment:fragment-ktx:1.8.9'
     implementation 'androidx.graphics:graphics-shapes:1.1.0'
@@ -119,19 +132,19 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.10.0'
     implementation 'androidx.preference:preference-ktx:1.2.1'
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
-    implementation 'androidx.savedstate:savedstate-ktx:1.4.0'
-    implementation 'androidx.slice:slice-core:1.1.0-alpha02'
+    implementation 'androidx.savedstate:savedstate-ktx:1.5.0'
+    implementation 'androidx.slice:slice-core:1.0.0'
     implementation 'androidx.window:window:1.5.1'
 
-    implementation 'com.google.android.material:material:1.13.0'
-    implementation 'com.google.dagger:dagger:2.59'
-    implementation 'com.google.guava:guava:33.5.0-android'
-    implementation 'com.google.protobuf:protobuf-javalite:4.32.1'
+    implementation 'com.google.android.material:material:1.14.0'
+    implementation 'com.google.dagger:dagger:2.59.2'
+    implementation 'com.google.guava:guava:33.6.0-android'
+    implementation 'com.google.protobuf:protobuf-javalite:4.35.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
     implementation 'javax.inject:javax.inject:1'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.11.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0'
 
-    ksp 'com.google.dagger:dagger-compiler:2.59'
+    ksp 'com.google.dagger:dagger-compiler:2.59.2'
 }

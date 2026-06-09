@@ -444,7 +444,7 @@
     <!-- Onboarding bottomsheet related -->
     <dimen name="bottom_sheet_edu_padding">24dp</dimen>
 
-    <!-- Taskbar related (placeholders to compile in Launcher3 without Quickstep) -->
+    <!-- Taskbar related (placeholders to compile in resurrection without Quickstep) -->
     <dimen name="taskbar_size">0dp</dimen>
     <dimen name="taskbar_phone_size">@*android:dimen/navigation_bar_frame_height</dimen>
     <dimen name="taskbar_phone_home_button_size">80dp</dimen>
@@ -465,7 +465,7 @@
     <dimen name="taskbar_line_indicator_width_spring">0dp</dimen>
     <dimen name="taskbar_app_translate_y_spring">0dp</dimen>
 
-    <!-- Transient taskbar (placeholders to compile in Launcher3 without Quickstep) -->
+    <!-- Transient taskbar (placeholders to compile in resurrection without Quickstep) -->
     <dimen name="transient_taskbar_padding">0dp</dimen>
     <dimen name="transient_taskbar_bottom_margin">0dp</dimen>
     <dimen name="transient_taskbar_shadow_blur">0dp</dimen>
@@ -483,10 +483,10 @@
     <dimen name="taskbar_button_margin_6_5">0dp</dimen>
 
     <!--- The minimum insets size for the IME to be considered docked (placeholders to compile in
-    Launcher3 without Quickstep). -->
+    resurrection without Quickstep). -->
     <dimen name="ime_docked_threshold">0dp</dimen>
 
-    <!-- Bubble bar (placeholders to compile in Launcher3 without Quickstep) -->
+    <!-- Bubble bar (placeholders to compile in resurrection without Quickstep) -->
     <dimen name="bubblebar_hotseat_adjustment_threshold">0dp</dimen>
 
     <!-- Size of the maximum radius for the enforced rounded rectangles. -->
@@ -498,7 +498,7 @@
     <!-- Base Swipe Detector, speed in dp/s -->
     <dimen name="base_swift_detector_fling_release_velocity">1dp</dimen>
 
-    <!-- Overview placeholder to compile in Launcher3 without Quickstep -->
+    <!-- Overview placeholder to compile in resurrection without Quickstep -->
     <dimen name="task_thumbnail_icon_size">0dp</dimen>
     <dimen name="task_thumbnail_icon_drawable_size">0dp</dimen>
     <dimen name="task_thumbnail_splash_icon_size">0dp</dimen>

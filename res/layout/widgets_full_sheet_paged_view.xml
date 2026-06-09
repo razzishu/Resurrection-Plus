@@ -16,7 +16,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto">
 
-    <com.android.launcher3.widget.picker.WidgetPagedView
+    <com.resurrection.launcher.widget.picker.WidgetPagedView
         android:id="@+id/widgets_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,24 +25,24 @@
         android:descendantFocusability="afterDescendants"
         launcher:pageIndicator="@+id/tabs" >
 
-        <com.android.launcher3.widget.picker.WidgetsRecyclerView
+        <com.resurrection.launcher.widget.picker.WidgetsRecyclerView
             android:id="@+id/primary_widgets_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingHorizontal="@dimen/widget_list_horizontal_margin"
             android:clipToPadding="false" />
 
-        <com.android.launcher3.widget.picker.WidgetsRecyclerView
+        <com.resurrection.launcher.widget.picker.WidgetsRecyclerView
             android:id="@+id/work_widgets_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingHorizontal="@dimen/widget_list_horizontal_margin"
             android:clipToPadding="false" />
 
-    </com.android.launcher3.widget.picker.WidgetPagedView>
+    </com.resurrection.launcher.widget.picker.WidgetPagedView>
 
     <!-- SearchAndRecommendationsView contains the tab layout as well -->
-    <com.android.launcher3.views.StickyHeaderLayout
+    <com.resurrection.launcher.views.StickyHeaderLayout
         android:id="@+id/search_and_recommendations_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
             <include layout="@layout/widget_recommendations" />
         </LinearLayout>
 
-        <com.android.launcher3.workprofile.PersonalWorkSlidingTabStrip
+        <com.resurrection.launcher.workprofile.PersonalWorkSlidingTabStrip
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="64dp"
@@ -124,7 +124,7 @@
                 android:textColor="@color/widget_picker_tab_text"
                 android:textSize="14sp"
                 style="?android:attr/borderlessButtonStyle" />
-        </com.android.launcher3.workprofile.PersonalWorkSlidingTabStrip>
+        </com.resurrection.launcher.workprofile.PersonalWorkSlidingTabStrip>
 
-    </com.android.launcher3.views.StickyHeaderLayout>
+    </com.resurrection.launcher.views.StickyHeaderLayout>
 </merge>
