@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Stylized House Symbol -->
+    <path
+        android:fillColor="@android:color/system_accent1_600"
+        android:pathData="M54,24 L24,48 L24,84 L84,84 L84,48 Z" />
+    <!-- Stylized 'R' cut out or layered -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.8"
+        android:pathData="M40,40 L55,40 C60,40 64,43 64,48 C64,53 60,56 55,56 L46,56 L46,70 M46,56 L64,70"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- Plus symbol as a 'chimney' or detail -->
+    <path
+        android:fillColor="@android:color/system_accent2_500"
+        android:pathData="M70,35 h8 v2 h-8 z M73,30 v10 h2 v-10 z" />
+</vector>
