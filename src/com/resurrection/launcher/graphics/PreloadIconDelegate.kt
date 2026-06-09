@@ -28,6 +28,7 @@ import android.graphics.Rect
 import android.util.FloatProperty
 import androidx.annotation.VisibleForTesting
 import androidx.core.graphics.ColorUtils
+import androidx.core.content.ContextCompat
 import com.android.app.animation.Interpolators
 import com.resurrection.launcher.Flags
 import com.resurrection.launcher.R
@@ -424,9 +425,9 @@ class PreloadIconDelegate(
             @DrawableCreationFlags creationFlags: Int = 0,
         ): FastBitmapDrawable {
             val originalState = newIcon(context, creationFlags).constantState
-            val themedSeedColor = context.resources.getColor(R.color.materialColorInverseSurface)
-            val themedProgressColor = context.resources.getColor(R.color.materialColorPrimary)
-            val themedProgressColorDark = context.resources.getColor(R.color.materialColorSecondary)
+            val themedSeedColor = ContextCompat.getColor(context, R.color.materialColorInverseSurface)
+            val themedProgressColor = ContextCompat.getColor(context, R.color.materialColorPrimary)
+            val themedProgressColorDark = ContextCompat.getColor(context, R.color.materialColorSecondary)
             val newState =
                 originalState.copy(
                     // Set a disabled icon color if the app is suspended or is pending download

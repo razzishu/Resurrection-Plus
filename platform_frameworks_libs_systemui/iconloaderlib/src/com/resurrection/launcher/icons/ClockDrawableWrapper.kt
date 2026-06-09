@@ -263,14 +263,12 @@ private constructor(base: AdaptiveIconDrawable, private val animationInfo: Clock
             iconDpi: Int,
         ): ClockDrawableWrapper? {
             val pm = context.packageManager
-            val appInfo =
-                pm.getApplicationInfo(pkg, MATCH_UNINSTALLED_PACKAGES or GET_META_DATA)
-                    ?: return null
+            val appInfo = pm.getApplicationInfo(pkg, MATCH_UNINSTALLED_PACKAGES or GET_META_DATA)
             val res = pm.getResourcesForApplication(appInfo)
             val metadata = appInfo.metaData ?: return null
             val drawableId = metadata.getInt(ROUND_ICON_METADATA_KEY, 0)
             val drawable =
-                res.getDrawableForDensity(drawableId, iconDpi)?.mutate() as? AdaptiveIconDrawable
+                res.getDrawableForDensity(drawableId, iconDpi, null)?.mutate() as? AdaptiveIconDrawable
                     ?: return null
 
             val foreground = drawable.foreground as? LayerDrawable ?: return null

@@ -46,6 +46,7 @@ constructor(
     /** Schedules a {@param task} to be executed on the current callbacks. */
     fun scheduleCallbackTask(task: CallbackTask) {
         for (cb in model.callbacks) {
+            @Suppress("DEPRECATION")
             uiExecutor.execute { task.execute(cb) }
         }
     }

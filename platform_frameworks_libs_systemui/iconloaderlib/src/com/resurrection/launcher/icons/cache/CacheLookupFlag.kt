@@ -20,6 +20,7 @@ import com.android.systemui.shared.Flags.extendibleThemeManager
 import kotlin.annotation.AnnotationRetention.SOURCE
 
 /** Flags to control cache lookup behavior */
+@ConsistentCopyVisibility
 data class CacheLookupFlag private constructor(@LookupFlag private val flag: Int) {
 
     /**

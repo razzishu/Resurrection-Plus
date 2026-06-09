@@ -30,40 +30,40 @@ import com.resurrection.launcher.icons.IconProvider
 object LauncherActivityCachingLogic : CachingLogic<LauncherActivityInfo> {
     const val TAG = "LauncherActivityCachingLogic"
 
-    override fun getComponent(info: LauncherActivityInfo): ComponentName = info.componentName
+    override fun getComponent(item: LauncherActivityInfo): ComponentName = item.componentName
 
-    override fun getUser(info: LauncherActivityInfo): UserHandle = info.user
+    override fun getUser(item: LauncherActivityInfo): UserHandle = item.user
 
-    override fun getLabel(info: LauncherActivityInfo): CharSequence? = info.label
+    override fun getLabel(item: LauncherActivityInfo): CharSequence? = item.label
 
-    override fun getApplicationInfo(info: LauncherActivityInfo) = info.applicationInfo
+    override fun getApplicationInfo(item: LauncherActivityInfo) = item.applicationInfo
 
     override fun loadIcon(
         context: Context,
         cache: BaseIconCache,
-        info: LauncherActivityInfo,
+        item: LauncherActivityInfo,
     ): BitmapInfo {
         cache.iconFactory.use { li ->
             val iconOptions: IconOptions =
                 IconOptions()
-                    .setUser(info.user)
+                    .setUser(item.user)
                     .assumeFullBleedIcon(
                         // b/358123888: Pre-archived apps can have BitmapDrawables without insets
                         useNewIconForArchivedApps() &&
                             VERSION.SDK_INT >= 35 &&
-                            info.activityInfo.isArchived
+                            item.activityInfo.isArchived
                     )
-                    .setSourceHint(getSourceHint(info, cache))
-            val iconDrawable = cache.iconProvider.getIcon(info.activityInfo, li.fullResIconDpi)
+                    .setSourceHint(getSourceHint(item, cache))
+            val iconDrawable = cache.iconProvider.getIcon(item.activityInfo, li.fullResIconDpi)
             if (context.packageManager.isDefaultApplicationIcon(iconDrawable)) {
                 Log.w(
                     TAG,
                     "loadIcon: Default app icon returned from PackageManager." +
-                        " component=${info.componentName}, user=${info.user}",
+                        " component=${item.componentName}, user=${item.user}",
                     Exception(),
                 )
                 // Make sure this default icon always matches BaseIconCache#getDefaultIcon
-                return cache.getDefaultIcon(info.user)
+                return cache.getDefaultIcon(item.user)
             }
             return li.createBadgedIconBitmap(iconDrawable, iconOptions)
         }

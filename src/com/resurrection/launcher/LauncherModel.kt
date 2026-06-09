@@ -131,12 +131,14 @@ constructor(
 
     /** Called when the workspace items have drastically changed */
     fun onWorkspaceUiChanged() {
+        @Suppress("DEPRECATION")
         MODEL_EXECUTOR.execute(modelDelegate::workspaceLoadComplete)
     }
 
     /** Called when the model is destroyed */
     fun destroy() {
         mModelDestroyed = true
+        @Suppress("DEPRECATION")
         MODEL_EXECUTOR.execute { modelDelegate.destroy() }
     }
 
@@ -386,6 +388,7 @@ constructor(
         if (mModelDestroyed) {
             return
         }
+        @Suppress("DEPRECATION")
         MODEL_EXECUTOR.execute {
             if (!isModelLoaded()) {
                 // Loader has not yet run.

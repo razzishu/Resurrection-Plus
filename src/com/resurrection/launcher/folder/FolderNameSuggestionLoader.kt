@@ -36,6 +36,7 @@ constructor(
     var folderNameProvider: FolderNameProvider? = null
 
     init {
+        @Suppress("DEPRECATION")
         MODEL_EXECUTOR.execute {
             folderNameProvider = folderNameProviderFactory.get()
             model.enqueueModelUpdateTask { _, dataModel, appList ->
@@ -51,6 +52,7 @@ constructor(
         workspaceItemInfos: ArrayList<WorkspaceItemInfo>,
         callback: Consumer<FolderNameInfos>,
     ) {
+        @Suppress("DEPRECATION")
         MODEL_EXECUTOR.execute {
             val nameInfos = FolderNameInfos()
             folderNameProvider?.getSuggestedFolderName(context, workspaceItemInfos, nameInfos)

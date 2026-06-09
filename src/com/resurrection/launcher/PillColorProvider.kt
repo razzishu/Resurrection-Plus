@@ -38,6 +38,7 @@ class PillColorProvider private constructor(c: Context) {
     var isMatchaEnabled = isMatchaEnabledInternal != 0
 
     private val pillColorObserver =
+        @Suppress("DEPRECATION")
         object : ContentObserver(ORDERED_BG_EXECUTOR.handler) {
             override fun onChange(selfChange: Boolean, uri: Uri?) {
                 if (uri == matchaUri) {

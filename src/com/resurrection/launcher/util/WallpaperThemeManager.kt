@@ -44,9 +44,11 @@ class WallpaperThemeManager(private val activity: Activity) :
         activity.registerComponentCallbacks(this)
     }
 
+    @Deprecated("This overrides a deprecated member in ActivityLifecycleCallbacksAdapter")
     override fun onActivitySaveInstanceState(activity: Activity, bundle: Bundle) =
         bundle.putBoolean(RUNTIME_STATE_RECREATE_TO_UPDATE_THEME, recreateToUpdateTheme)
 
+    @Deprecated("This overrides a deprecated member in ActivityLifecycleCallbacksAdapter")
     override fun onActivityDestroyed(unused: Activity) =
         WallpaperColorHints.get(activity).unregisterOnColorsChangedListener(this)
 

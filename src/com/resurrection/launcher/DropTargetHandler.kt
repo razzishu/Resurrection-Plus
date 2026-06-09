@@ -97,6 +97,7 @@ class DropTargetHandler(launcher: Launcher) {
 
     fun onAccessibilityDelete(view: View?, item: ItemInfo, announcement: CharSequence) {
         removeItemAndStripEmptyScreens(view, item)
+        @Suppress("DEPRECATION")
         mLauncher.dragLayer.announceForAccessibility(announcement)
     }
 

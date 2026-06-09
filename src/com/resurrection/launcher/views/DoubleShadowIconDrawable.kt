@@ -112,12 +112,14 @@ class DoubleShadowIconDrawable(
 
     override fun getIntrinsicWidth() = iconSize
 
+    @Deprecated("This overrides a deprecated member in Drawable")
     override fun getOpacity() = PixelFormat.TRANSPARENT
 
     override fun setAlpha(alpha: Int) {
         mIconDrawable.alpha = alpha
     }
 
+    @Deprecated("This overrides a deprecated member in Drawable")
     override fun setColorFilter(colorFilter: ColorFilter?) {
         mIconDrawable.colorFilter = colorFilter
     }

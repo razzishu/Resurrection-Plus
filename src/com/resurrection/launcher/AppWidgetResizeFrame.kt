@@ -82,7 +82,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
     private lateinit var cellLayout: CellLayout
     private lateinit var dragLayer: DragLayer
 
-    @Deprecated("Replaced with an option in popup when homeScreenEditImprovements flag is on")
+    @Suppress("DEPRECATION")
     private var reconfigureButton: ImageButton? = null
 
     private val backgroundPadding: Int
@@ -220,7 +220,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
             }
         }
 
-        @Deprecated("Will be removed as part of homeScreenEditImprovements flag")
+        @Suppress("DEPRECATION")
         fun initializeReconfigureButton() {
             reconfigureButton =
                 (findViewById<View>(R.id.widget_reconfigure_button) as ImageButton).apply {
@@ -944,7 +944,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
         }
     }
 
-    @Deprecated("Will be removed as part of homeScreenEditImprovements flag")
+    @Suppress("DEPRECATION")
     private fun showReconfigurableWidgetEducationTip(): ArrowTipView? {
         val configureButton = reconfigureButton ?: return null
 
@@ -962,7 +962,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
             )
     }
 
-    @Deprecated("Will be removed as part of homeScreenEditImprovements flag")
+    @Suppress("DEPRECATION")
     private fun hasSeenReconfigurableWidgetEducationTip(): Boolean {
         return get(context).get(LauncherPrefs.RECONFIGURABLE_WIDGET_EDUCATION_TIP_SEEN) ||
             Utilities.isRunningInTestHarness()

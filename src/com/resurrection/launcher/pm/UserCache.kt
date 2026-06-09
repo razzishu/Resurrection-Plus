@@ -26,6 +26,7 @@ import android.os.UserManager.USER_TYPE_PROFILE_MANAGED
 import android.os.UserManager.USER_TYPE_PROFILE_PRIVATE
 import android.util.Log
 import androidx.annotation.WorkerThread
+import androidx.core.content.IntentCompat
 import com.resurrection.launcher.Utilities.ATLEAST_U
 import com.resurrection.launcher.Utilities.ATLEAST_V
 import com.resurrection.launcher.dagger.ApplicationContext
@@ -87,7 +88,7 @@ constructor(@ApplicationContext private val context: Context, tracker: DaggerSin
     private fun onUsersChanged(intent: Intent) {
         if (closed) return
         rebuildUserCache()
-        val user = intent.getParcelableExtra<UserHandle>(Intent.EXTRA_USER) ?: return
+        val user = IntentCompat.getParcelableExtra(intent, Intent.EXTRA_USER, UserHandle::class.java) ?: return
         val action = intent.action ?: return
         userEventListeners.forEach { it.accept(user, action) }
     }

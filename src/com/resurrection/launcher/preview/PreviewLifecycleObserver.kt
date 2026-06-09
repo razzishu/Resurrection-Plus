@@ -61,6 +61,7 @@ class PreviewLifecycleObserver(
             return true
         }
 
+        @Suppress("DEPRECATION")
         when (message.what) {
             MESSAGE_ID_UPDATE_PREVIEW ->
                 renderer.hideBottomRow(message.data.getBoolean(KEY_HIDE_BOTTOM_ROW))

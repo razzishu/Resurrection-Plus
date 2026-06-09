@@ -82,6 +82,7 @@ sealed interface StartupLatencyLogger {
                 logEnd(LAUNCHER_LATENCY_STARTUP_WORKSPACE_LOADER_ASYNC)
             }
 
+            @Suppress("DEPRECATION")
             Executors.MAIN_EXECUTOR.handler.postAtFrontOfQueue {
                 Log.i(
                     "Launcher",

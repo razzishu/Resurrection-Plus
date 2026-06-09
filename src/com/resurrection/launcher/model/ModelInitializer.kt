@@ -84,6 +84,7 @@ constructor(
         val launcherApps = context.getSystemService(LauncherApps::class.java)!!
         // TODO: remove logging after b/425319508
         FileLog.d(TAG, "registering modelCallbacks for LauncherApps")
+        @Suppress("DEPRECATION")
         launcherApps.registerCallback(modelCallbacks, MODEL_EXECUTOR.handler)
         lifeCycle.addCloseable {
             // TODO: remove logging after b/425319508

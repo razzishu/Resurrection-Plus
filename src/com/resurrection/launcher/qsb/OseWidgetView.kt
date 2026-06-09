@@ -163,7 +163,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
     companion object {
         private const val TAG = "OseWidgetView"
 
-        private val STABLE_ID = Object()
+        private val STABLE_ID = Any()
 
         private fun getTagInfo(provider: AppWidgetProviderInfo?): ItemInfo {
             val info =

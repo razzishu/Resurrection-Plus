@@ -251,6 +251,7 @@ object FileLog {
 
                 MSG_FLUSH -> {
                     closeWriter()
+                    @Suppress("UNCHECKED_CAST")
                     (msg.obj as? Pair<PrintWriter?, CountDownLatch?>)?.let { pair ->
                         pair.first?.let {
                             var i = 0

@@ -106,20 +106,20 @@ constructor(
 /** Caching logic for CacheableShortcutInfo. */
 object CacheableShortcutCachingLogic : CachingLogic<CacheableShortcutInfo> {
 
-    override fun getComponent(info: CacheableShortcutInfo): ComponentName =
-        ShortcutKey.fromInfo(info.shortcutInfo).componentName
+    override fun getComponent(item: CacheableShortcutInfo): ComponentName =
+        ShortcutKey.fromInfo(item.shortcutInfo).componentName
 
-    override fun getUser(info: CacheableShortcutInfo): UserHandle = info.shortcutInfo.userHandle
+    override fun getUser(item: CacheableShortcutInfo): UserHandle = item.shortcutInfo.userHandle
 
-    override fun getLabel(info: CacheableShortcutInfo): CharSequence? = info.shortcutInfo.shortLabel
+    override fun getLabel(item: CacheableShortcutInfo): CharSequence? = item.shortcutInfo.shortLabel
 
-    override fun getApplicationInfo(info: CacheableShortcutInfo) = info.appInfo.getInfo()
+    override fun getApplicationInfo(item: CacheableShortcutInfo) = item.appInfo.getInfo()
 
-    override fun loadIcon(context: Context, cache: BaseIconCache, info: CacheableShortcutInfo) =
+    override fun loadIcon(context: Context, cache: BaseIconCache, item: CacheableShortcutInfo) =
         LauncherIcons.obtain(context).use { li ->
             CacheableShortcutInfo.getIcon(
                     context,
-                    info.shortcutInfo,
+                    item.shortcutInfo,
                     LauncherAppState.getIDP(context).fillResIconDpi,
                 )
                 ?.let { d ->
@@ -128,16 +128,16 @@ object CacheableShortcutCachingLogic : CachingLogic<CacheableShortcutInfo> {
                         IconOptions()
                             .setExtractedColor(Themes.getColorAccent(context))
                             .setSourceHint(
-                                getSourceHint(info, cache)
+                                getSourceHint(item, cache)
                                     .copy(
                                         isFileDrawable =
                                             ApiWrapper.INSTANCE[context].isFileDrawable(
-                                                info.shortcutInfo
+                                                item.shortcutInfo
                                             )
                                     )
                             ),
                     )
-                } ?: info.fallbackIconProvider.invoke(li) ?: BitmapInfo.LOW_RES_INFO
+                } ?: item.fallbackIconProvider.invoke(li) ?: BitmapInfo.LOW_RES_INFO
         }
 
     override fun getFreshnessIdentifier(

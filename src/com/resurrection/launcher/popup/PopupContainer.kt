@@ -139,7 +139,7 @@ open class PopupContainer<T>(context: Context?, val originalView: View, val item
             if (
                 originalView != null &&
                     (!originalView.isAttachedToWindow ||
-                        !ShortcutUtil.supportsShortcuts(popup?.itemInfo))
+                        !ShortcutUtil.supportsShortcuts(popup.itemInfo))
             ) {
                 popup.animateClose()
             }

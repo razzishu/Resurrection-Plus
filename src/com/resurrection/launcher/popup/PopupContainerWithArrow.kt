@@ -105,6 +105,7 @@ private constructor(
     }
 
     fun configureForLauncher(launcher: Launcher, itemInfo: ItemInfo) {
+        @Suppress("UNCHECKED_CAST")
         addOnAttachStateChangeListener(
             LauncherPopupLiveUpdateHandler(launcher, this as PopupContainerWithArrow<Launcher>)
         )

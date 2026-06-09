@@ -80,7 +80,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
      * default value type, and will throw an error if the type of the item provided is not a
      * `String`, `Boolean`, `Float`, `Int`, `Long`, or `Set<String>`.
      */
-    @Suppress("IMPLICIT_CAST_TO_ANY", "UNCHECKED_CAST")
+    @Suppress("IMPLICIT_CAST_TO_ANY", "UNCHECKED_CAST", "PLATFORM_CLASS_MAPPED_TO_KOTLIN")
     private fun <T> getInner(item: Item, default: T): T {
         val sp = getSharedPrefs(item)
         return when {
@@ -150,7 +150,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
      * helpful for updating `SharedPreferences` values for `List<<Item>Any>` that have multiple
      * types of Item values.
      */
-    @Suppress("UNCHECKED_CAST")
+    @Suppress("UNCHECKED_CAST", "PLATFORM_CLASS_MAPPED_TO_KOTLIN")
     internal fun SharedPreferences.Editor.putValue(
         item: Item,
         value: Any?,

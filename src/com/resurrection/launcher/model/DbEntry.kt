@@ -127,7 +127,7 @@ class DbEntry : ItemInfo(), Comparable<DbEntry> {
      */
     private fun cleanIntentString(intentStr: String): String {
         try {
-            return Intent.parseUri(intentStr, 0).apply { sourceBounds = null }.toURI()
+            return Intent.parseUri(intentStr, 0).apply { sourceBounds = null }.toUri(0)
         } catch (e: Exception) {
             Log.e(TAG, "Unable to parse Intent string: $intentStr", e)
             return intentStr

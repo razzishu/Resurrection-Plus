@@ -23,6 +23,7 @@ import android.content.Context
 import android.graphics.Rect
 import android.os.Bundle
 import android.util.SizeF
+import androidx.core.os.BundleCompat
 import com.resurrection.launcher.InvariantDeviceProfile
 import com.resurrection.launcher.dagger.ApplicationContext
 import com.resurrection.launcher.dagger.LauncherComponentProvider.appComponent
@@ -89,7 +90,7 @@ constructor(
 
     companion object {
 
-        fun Bundle.getWidgetSizeList() = getParcelableArrayList<SizeF>(OPTION_APPWIDGET_SIZES)
+        fun Bundle.getWidgetSizeList() = BundleCompat.getParcelableArrayList(this, OPTION_APPWIDGET_SIZES, SizeF::class.java)
 
         /**
          * Returns the min and max widths and heights given a list of sizes, in dp.

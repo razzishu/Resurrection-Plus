@@ -24,6 +24,7 @@ import com.resurrection.launcher.Utilities
 import java.util.function.Supplier
 
 /** Cache for the device policy strings used in Launcher. */
+@ConsistentCopyVisibility
 data class StringCache
 private constructor(
     /** User on-boarding title for work profile apps. */

@@ -113,7 +113,9 @@ constructor(private val packageManagerHelper: PackageManagerHelper) {
                 keySelector = { it.installerPackageName },
                 valueTransform = { it.appPackageName },
             )
-            .mapValues { it.value.filterNotNull().toSet() } as Map<String, Set<String>>
+            .mapValues {
+                it.value.filterNotNull().toSet()
+            } as Map<String, Set<String>>
     }
 
     /** Maps Installer packages to Set of ItemInfos. Filter out installing packages. */
@@ -121,10 +123,10 @@ constructor(private val packageManagerHelper: PackageManagerHelper) {
         allItems: Iterable<ItemInfo>,
         installingPackages: Set<String>,
         installerAppCache: MutableMap<String, String?>,
-    ): Map<String, List<ItemInfo>> =
-        allItems
+    ): Map<String, List<ItemInfo>> {
+        val map = allItems
             .sortedBy { it.screenId }
-            .groupByTo(mutableMapOf()) {
+            .groupBy {
                 getPackageName(it)?.let { pkg ->
                     if (installingPackages.contains(pkg)) {
                         null
@@ -135,7 +137,9 @@ constructor(private val packageManagerHelper: PackageManagerHelper) {
                     }
                 }
             }
-            .apply { remove(null) } as Map<String, List<ItemInfo>>
+        @Suppress("UNCHECKED_CAST")
+        return map.filterKeys { it != null } as Map<String, List<ItemInfo>>
+    }
 
     /**
      * Add first screen Pending Items from Map to [FirstScreenBroadcastModel] for given installer

@@ -132,6 +132,7 @@ private class InMemorySharedPreferences : SharedPreferences {
                 values = newValues.toMap()
             }
 
+            @Suppress("DEPRECATION")
             MAIN_EXECUTOR.execute {
                 for (k in keysToRemove.union(valuesToAdd.keys)) {
                     for (l in listeners) {

@@ -34,6 +34,7 @@ object BinderUtils {
     ) : Binder(realBinder?.interfaceDescriptor), OnOwnerDestroyedCallback {
 
         init {
+            @Suppress("DEPRECATION")
             MAIN_EXECUTOR.execute { cleanupSet.addOnOwnerDestroyedCallback(this) }
         }
 

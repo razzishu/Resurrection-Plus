@@ -389,12 +389,12 @@ constructor(
             iconFactory.use { li ->
                 entry.bitmap =
                     li.createBadgedIconBitmap(
-                        BitmapDrawable(icon),
+                        BitmapDrawable(context.resources, icon),
                         IconOptions().setUser(user).assumeFullBleedIcon(true),
                     )
             }
         }
-        if (!TextUtils.isEmpty(title) && entry.bitmap.icon != null) {
+        if (!TextUtils.isEmpty(title)) {
             cache[cacheKey] = entry
         }
     }

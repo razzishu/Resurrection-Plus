@@ -69,8 +69,8 @@ object UtilitiesKt {
                 return viewGroup.clipChildren
             }
 
-            override fun setAttribute(viewGroup: ViewGroup, clipChildren: Boolean) {
-                viewGroup.clipChildren = clipChildren
+            override fun setAttribute(viewGroup: ViewGroup, attr: Boolean) {
+                viewGroup.clipChildren = attr
             }
         }
 
@@ -82,8 +82,8 @@ object UtilitiesKt {
                 return viewGroup.clipToPadding
             }
 
-            override fun setAttribute(viewGroup: ViewGroup, clipToPadding: Boolean) {
-                viewGroup.clipToPadding = clipToPadding
+            override fun setAttribute(viewGroup: ViewGroup, attr: Boolean) {
+                viewGroup.clipToPadding = attr
             }
         }
 

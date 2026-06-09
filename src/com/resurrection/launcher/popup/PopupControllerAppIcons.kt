@@ -49,6 +49,7 @@ class PopupControllerForAppIcon<T> : PopupController<T> where T : Context, T : A
             launcher
                 .getSupportedShortcuts(item)
                 .map<SystemShortcut<Launcher>> { s ->
+                    @Suppress("UNCHECKED_CAST")
                     s.getShortcut(launcher, item, icon) as SystemShortcut<Launcher>?
                 }
                 .filter { it != null }

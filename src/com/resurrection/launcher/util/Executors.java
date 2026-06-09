@@ -54,6 +54,7 @@ public class Executors {
      * executor annotated with
      * {@link com.resurrection.launcher.concurrent.annotations.ThreadPool} instead.
      */
+    @Deprecated
     public static final ThreadPoolExecutor THREAD_POOL_EXECUTOR = new ThreadPoolExecutor(
             POOL_SIZE, POOL_SIZE, KEEP_ALIVE, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
 
@@ -64,6 +65,7 @@ public class Executors {
      * executor annotated with {@link com.resurrection.launcher.concurrent.annotations.Background}
      * instead.
      */
+    @Deprecated
     public static final LooperExecutor ORDERED_BG_EXECUTOR =
             new LooperExecutor("BackgroundExecutor", THREAD_PRIORITY_BACKGROUND);
 
@@ -73,6 +75,7 @@ public class Executors {
      * @deprecated Use {@link com.resurrection.launcher.concurrent.ExecutorsModule} to inject an
      * executor annotated with {@link com.resurrection.launcher.concurrent.annotations.Ui} instead.
      */
+    @Deprecated
     public static final LooperExecutor MAIN_EXECUTOR =
             new LooperExecutor(Looper.getMainLooper(), THREAD_PRIORITY_FOREGROUND);
 
@@ -83,6 +86,7 @@ public class Executors {
      * executor annotated with {@link
      * com.resurrection.launcher.concurrent.annotations.LightweightBackground} instead.
      */
+    @Deprecated
     public static final LooperExecutor UI_HELPER_EXECUTOR =
             new LooperExecutor("UiThreadHelper", Process.THREAD_PRIORITY_FOREGROUND);
 
@@ -94,12 +98,11 @@ public class Executors {
      * executor annotated with {@link
      * com.resurrection.launcher.concurrent.annotations.LightweightBackground} instead.
      */
+    @Deprecated
     public static final LooperExecutor DATA_HELPER_EXECUTOR =
             new LooperExecutor("DataThreadHelper", Process.THREAD_PRIORITY_DEFAULT);
 
-    /**
-     * Executor used for running Launcher model related tasks (eg loading icons or updated db)
-     */
+    @Deprecated
     public static final LooperExecutor MODEL_EXECUTOR = new LooperExecutor("launcher-loader");
 
     /**
@@ -109,6 +112,7 @@ public class Executors {
      * com.resurrection.launcher.concurrent} package.
      * @param packageName Package associated with the executor.
      */
+    @Deprecated
     public static LooperExecutor getPackageExecutor(String packageName) {
         return PACKAGE_EXECUTORS.computeIfAbsent(packageName, LooperExecutor::new);
     }
@@ -119,6 +123,7 @@ public class Executors {
      * @deprecated Prefer using an executor annotated from the
      * {@link com.resurrection.launcher.concurrent} package.
      */
+    @Deprecated
     public static class SimpleThreadFactory implements ThreadFactory {
 
         private final int mPriority;
@@ -126,6 +131,7 @@ public class Executors {
 
         private final AtomicInteger mCount = new AtomicInteger(0);
 
+        @Deprecated
         public SimpleThreadFactory(String namePrefix, int priority) {
             mNamePrefix = namePrefix;
             mPriority = priority;

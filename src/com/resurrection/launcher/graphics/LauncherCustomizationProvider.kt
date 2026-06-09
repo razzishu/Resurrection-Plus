@@ -42,6 +42,7 @@ class LauncherCustomizationProvider : ContentProviderProxy() {
 
         // Temporary change until the clients migrate to the new permission
         val source = callingAttributionSource?.packageName ?: throw genericAccessException()
+        @Suppress("DEPRECATION")
         val signatures =
             ctx.packageManager.getPackageInfo(source, PackageManager.GET_SIGNATURES)?.signatures
                 ?: throw genericAccessException()

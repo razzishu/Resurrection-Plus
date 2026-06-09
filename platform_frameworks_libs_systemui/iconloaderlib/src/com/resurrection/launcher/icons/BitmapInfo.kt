@@ -237,6 +237,6 @@ data class BitmapInfo(
             return BitmapInfo(icon = bitmap, color = color, defaultIconShape = defaultShape)
         }
 
-        private inline fun Int.hasMask(mask: Int) = (this and mask) != 0
+        private fun Int.hasMask(mask: Int) = (this and mask) != 0
     }
 }

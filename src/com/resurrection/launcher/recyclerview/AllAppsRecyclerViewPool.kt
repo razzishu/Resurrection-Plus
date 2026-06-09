@@ -166,7 +166,7 @@ constructor(
                     if (activeRv.layoutManager != null) adapter.createViewHolder(activeRv, viewType)
                     else null
                 },
-                callbackExecutor = MAIN_EXECUTOR,
+                callbackExecutor = @Suppress("DEPRECATION") MAIN_EXECUTOR,
             ) {
                 if (preInflationCountProvider.invoke() > 0) putRecycledView(it)
             }

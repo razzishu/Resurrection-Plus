@@ -26,23 +26,23 @@ import com.resurrection.launcher.icons.IconProvider
 /** Caching logic for ComponentWithLabelAndIcon */
 object CachedObjectCachingLogic : CachingLogic<CachedObject> {
 
-    override fun getComponent(info: CachedObject): ComponentName = info.component
+    override fun getComponent(item: CachedObject): ComponentName = item.component
 
-    override fun getUser(info: CachedObject): UserHandle = info.user
+    override fun getUser(item: CachedObject): UserHandle = item.user
 
-    override fun getLabel(info: CachedObject): CharSequence? = info.label
+    override fun getLabel(item: CachedObject): CharSequence? = item.label
 
-    override fun loadIcon(context: Context, cache: BaseIconCache, info: CachedObject): BitmapInfo {
-        val d = info.getFullResIcon(cache) ?: return BitmapInfo.LOW_RES_INFO
+    override fun loadIcon(context: Context, cache: BaseIconCache, item: CachedObject): BitmapInfo {
+        val d = item.getFullResIcon(cache) ?: return BitmapInfo.LOW_RES_INFO
         cache.iconFactory.use { li ->
             return li.createBadgedIconBitmap(
                 d,
-                IconOptions().setUser(info.user).setSourceHint(getSourceHint(info, cache)),
+                IconOptions().setUser(item.user).setSourceHint(getSourceHint(item, cache)),
             )
         }
     }
 
-    override fun getApplicationInfo(info: CachedObject) = info.applicationInfo
+    override fun getApplicationInfo(item: CachedObject) = item.applicationInfo
 
     override fun getFreshnessIdentifier(item: CachedObject, provider: IconProvider): String? =
         item.getFreshnessIdentifier(provider)
